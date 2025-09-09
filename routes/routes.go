@@ -13,6 +13,7 @@ func SetupRoutes(r *gin.Engine, db *gorm.DB) {
 
 	api := r.Group("/api")
 	{
+		api.GET("/index", barangController.Hello)
 		api.POST("/jenisbarang", barangController.CreateJenisBarang)
 	}
 }
